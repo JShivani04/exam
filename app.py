@@ -3,7 +3,7 @@ app=Flask(__name__)
 @app.route('/')
 def index():
     return render_template('form.html', alert=None)
-@app.route('/submit',method=['POST'])
+@app.route('/submit',methods=['POST'])
 def submit():
     n=request.form.get('username','').strip()
     y=request.form.get('year')
