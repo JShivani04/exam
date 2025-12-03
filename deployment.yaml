@@ -1,0 +1,9 @@
+appiVersion:apps/v1
+kind:Deployment
+metadata:{name:reg-app}
+spec:
+  selector:{matchlabels:{app:reg}}
+  template:
+    metadata:{labels:{app:reg}}
+    spec:
+      container:[{name:reg,image:shivanij454/registrationapp:seleniumv3,port:[{ContainerPort:5000}]}]

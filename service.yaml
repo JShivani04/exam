@@ -1,0 +1,7 @@
+appiVersion:v1
+kind:Service
+metadata:{name:reg-svc}
+spec:
+  type:NodePort
+  name:{app:reg}
+  port:{port:5000,targetport:5000,NodePort:30020}
